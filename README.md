@@ -1,6 +1,6 @@
 # Sort-it
 
-## A machine-learning student project
+## A machine-learning student project from 2020
 
 Planet matters. **Stream** with your webcam or **upload** an image, and our application will tell you in wich trash you have to throw it.
 
