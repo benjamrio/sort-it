@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Sort-it</h1>
+    <p class="lead font-weight-normal">Because you need to sort your garbage</p>
+    <br>
+    <hr>
+    <br>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form method="POST" action="">
+      <div class="form-group">
+        <!-- On peut remplacer les render_field(form.author, class_="form-control") par des inputs qui ont le bon name -->
+        <label for="factor">Scale Factor</label>
+        <input id="factor" name="scaleFactor" aria-describedby="factorHelp" >
+        <small id="factorHelp" class="form-text text-muted">A float greater than 1. Less than 2 is better.</small>
+      </div>
+<br>
+      <div class="form-group">
+        <label for="Neighbours">Minimum Neighbours </label>
+        <input id="Neighbours" name ="minNeighbours" aria-describedby="NeighboursHelp">
+        <small id="NeigboursHelp" class="form-text text-muted">An integer. Between 4 and 8 is better.</small>
+      </div>
+    </br>
+    <div class="form-group">
+      <label for ="input"> Local path to Image: </label>
+      <input id="input" name="pathToImage" aria-describedby="pathHelp">
+      <small id="pathHelp" class="form-text text-muted"> Used for "Upload Picture". Don't write the brackets.</small>
+      <br>
+      <hr>
+      <br>
+    </div>
+
+    <input class="btn btn-primary btn-lg" type="submit" name="submit_button" value="Live Capture">
+    <input class="btn btn-primary btn-lg" type="submit" name="submit_button"value="Upload Picture">
+  </form>
+  <br>
+<p class= lead>Press "a" to capture image once in the streaming session</p>
+ </div>
+<div class="product-device box-shadow d-none d-md-block"></div>
+<div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+</footer>
+{% endblock %}
